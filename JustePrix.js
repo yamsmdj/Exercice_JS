@@ -29,15 +29,14 @@ for (let i = 0; i < 5; i++) {
             break
             }
         if(user > number)  {
-            user=alert("trop grand")
+            user=alert("Le nombre mystere est plus petit ! ATTENTION, il te reste " + (5 - essaie) +" chance")
         }else {
-         user= alert("trop petit")
+         user= alert("Le nombre mystere est plus grand ! ATTENTION, il te reste " + (5 - essaie) +" chance")
         }
         essaie++
-        console.log(essaie, number)
         user = prompt ("recommence")
         }
 }
     if (user == number) {
-        alert("gg tu as reussi a trouver le chiffre en " + essaie + " essaie")
+        alert("Bravo ! tu as reussi a trouver le chiffre en " + essaie + " essaie")
     }
