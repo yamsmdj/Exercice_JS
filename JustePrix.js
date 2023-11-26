@@ -19,26 +19,23 @@
 
 number= Math.ceil(Math.random()*100) +1
 let user = Number(prompt("Devine le nombre : "))
+essaie = 0
 
-while (user != number) {
-    for (let i = 0; i <= 3; i++) {        
-    if (user > number) {
-        alert("trop grand")
-    }else{
-        alert("trop petit")
-    }
-   user = prompt ("recommence")
-
-if (user == number) {
-    alert("gagné! le chiffre est bien " + number)
-
-    
+for (let i = 0; i < 5; i++) {
+    while (user != number) {
+        if(user > number)  {
+            user=alert("trop grand")
+        }else {
+         user= alert("trop petit")
+        }
+        user = prompt ("recommence")
+        essaie++
+        console.log(essaie)
+        if (essaie = 5) {
+            console.log(essaie + " perdu")
+            break}}
 }
-}}
-
-if (number == user) {
-    prompt("gg tu as reussi a trouver le chiffre en " + i + "essaie" )
- } else{
-    alert("Tu as échouer, t'es " + i + "sont atteint")
+    if (user == number) {
+        alert("gg tu as reussi a trouver le chiffre en " + essaie + "essaie")
     }
-
+   
