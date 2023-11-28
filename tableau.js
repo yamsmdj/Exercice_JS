@@ -1,28 +1,31 @@
 let listemots = [ "Cachalot", "Pétunia", "Serviette"]
 let listePhrases = ["Pas de panique !" ,"La vie, l’univers et le reste","Merci pour le poisson"]
 let score = 0
-let motUtilisateur = prompt()
+Nombrequestion = listePhrases.length
 
-let choix = prompt("Avec quel listes desirez vous jouer : 'mots' ou 'phrase' ? ")
-while (choix !== "mots" && choix !== "phrases") {
-    choix = prompt('Avec quel listes desirez vous jouer : "mots" ou "phrase" ? ')
-}
-
-if (choix === "mots") {
-    for (let i = 0; i < listemots.length; i++) {
-       motUtilisateur = prompt("Entrez le mot : " + listemots[1] )
-       if (motUtilisateur === listemots[0]){
-        score++
-       }}
-}
-else{
-    for (let i = 0; i < listePhrases.length; i++) {
-
-         phraseUser = prompt("Entrez le mot : " + listePhrases[0] )
-        if (motUtilisateur === listePhrases[0]) {
-            score++
-        }}
-}
+    function returnmsg(score, Nombrequestion) {
+        let msg= alert("votre score est de" + score + " sur " +Nombrequestion)
+        return msg}
+        
+    let choix = prompt("Avec quel listes desirez vous jouer : 'mots' ou 'phrase' ? ")
+    while ( choix != "mots" && choix != "phrase" ){
+     choix = prompt("Tu dois choisir avec quel listes tu veux jouer : 'mots' ou 'phrase' ? ")
+    }
+    if (choix == "mots") {
+        for (let i = 0; i < listemots.length; i++) {
+            choix = prompt(" Entre le mot : " + listemots[i])
+            if (choix == listemots[i]) {
+                score++
+            }}
+            returnmsg
+    }else  {
+        for (let i = 0; i < listePhrases.length; i++) {
+        choix = prompt("Entre la phrase : " + listePhrases[i])
+            if (choix == listePhrases[i]) {
+                score++
+            }}
+            returnmsg
+            console.log(returnmsg)}
 
 
 // const listeMots = ["Cachalot", "Pétunia", "Serviette"]
